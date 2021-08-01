@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+
+  <meta charset="UTF-8">
+  <title>Color_Clasifier</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="{{ url_for('static', path='css/style.css')}}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="overlay">
+
+  <form action="/color_predict/" enctype="multipart/form-data" method="post">
+   <div class="con">
+   <!--     Start  header Content  -->
+   <header class="head-form">
+      <h2>COLOUR CLASSIFICATION</h2>
+      <!--     A welcome message or an explanation of the login form -->
+      <p>Upload an image and it will predict the most prominent colour with the specific color, colour family and RGB color code.</p>
+   </header>
+   <!--     End  header Content  -->
+   <br>
+   <div class="field-set">
+     
+        <!--   user name Input-->
+         <input class="form-input" id="txt-input" name="file" type="file" placeholder="@image" required>
+     
+      <br>
+     
+     
+      <br>
+<!--        buttons -->
+<!--      button LogIn -->
+      <button class="log-in"> Classify </button>
+   </div>
+
+     
+<!--   End Conrainer  -->
+  </div>
+  
+  <!-- End Form -->
+</form>
+<script>
+  $(document).ready(function() {
+    $('form').ajaxForm();
+  });
+</script>
+</div>
+<script src="{{ url_for('static', path='js/jquery.js')}}"></script>
+<script src="{{ url_for('static', path='js/ajax-form.js')}}"></script>
+
+</body>
+</html>
