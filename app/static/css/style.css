@@ -136,3 +136,10 @@ button:hover {
 
 .field-set{position: absolute;
     top: 50%;}
+
+
+@media (max-width: 1000px){
+body{
+    display: none;
+}
+}
