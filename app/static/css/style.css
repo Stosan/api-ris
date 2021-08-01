@@ -139,7 +139,10 @@ button:hover {
 
 
 @media (max-width: 1000px){
-body{
+.wrapper{
     display: none;
+}
+.mob-wrapper{
+    font-size: large;
 }
 }
